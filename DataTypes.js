@@ -79,3 +79,46 @@ var copy = original;
 copy.language = "Python"; // changing 'copy' also affects 'original'
 
 console.log(original.language); // Output: "Python" (because both variables point to the same object)
+
+// ===============================
+// JavaScript Assignment: Practice Primitive & Reference Data Types
+// ===============================
+
+// ----------- PART 1: PRIMITIVE DATA TYPES -----------
+// 1. Declare variables using each of the following primitive data types:
+//    a. A string for a favorite movie
+//    b. A number for your birth year
+//    c. A boolean indicating if you like pizza
+//    d. A variable declared but not initialized (undefined)
+//    e. A variable explicitly assigned null
+
+// 2. Log all the variables to the console
+
+// 3. Use the typeof operator to print the type of each variable
+
+// ----------- PART 2: REFERENCE DATA TYPES -----------
+// 4. Create an object representing a book with properties: title, author, and numberOfPages
+
+// 5. Log the whole object and access each property using dot notation
+
+// 6. Create an array of your 3 favorite fruits
+
+// 7. Log the array and access the second fruit using its index
+
+// 8. Write a function called greetUser that takes a name as a parameter and returns a greeting string
+
+// 9. Call the function with your name and log the result
+
+// ----------- BONUS TASKS -----------
+// 10. Create two variables that reference the same object.
+//     Modify one and observe the change in the other (to demonstrate reference behavior)
+
+// 11. Try reassigning a constant declared with a primitive value (e.g., a string)
+//     Observe and comment on the error that occurs
+
+// 12. Explain the difference between primitive and reference data types in your own words using comments
+
+// ===============================
+// Submit your completed assignment by pasting your code below each task comment.
+// Make sure your console logs match the expected behavior for both types.
+// ===============================
