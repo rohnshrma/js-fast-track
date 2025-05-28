@@ -125,3 +125,25 @@ console.log(txt.split()); // Outputs: ["hello world this is john doe"]
 console.log(txt.split("")); // Splits at each character, outputs: ['h', 'e', 'l', 'l', 'o', ' ', ... , 'e']
 console.log(txt.split(" ")); // Splits at each space, outputs: ['hello', 'world', 'this', 'is', 'john', 'doe']
 console.log(txt.split("i")); // Splits at each "i", outputs: ['hello world th', 's ', 's john doe']
+
+// '.includes(searchString, startPosition)' returns true if the string contains 'searchString', false otherwise
+// If 'startPosition' is provided, the search begins at that index (inclusive)
+console.log(txt.includes("a")); // Outputs: false, as "a" is not present in "hello world this is john doe"
+// Note: The original commented line 'txt.includes("a", 12, 15)' is incorrect because 'includes' accepts only two arguments:
+// the search string and an optional start position. The third argument (15) is ignored in JavaScript.
+console.log(txt.includes("a", 12)); // Outputs: false, as "a" is not found in the substring starting from index 12 ("this is john doe")
+
+// '.replace(searchString, replacement)' replaces the first occurrence of 'searchString' with 'replacement'
+// Returns a new string with the replacement made; the original string is unchanged
+console.log(txt.replace("i", "xx")); // Outputs: "hello world thxxs is john doe", replacing the first "i" (at index 13) with "xx"
+
+// '.replaceAll(searchString, replacement)' replaces all occurrences of 'searchString' with 'replacement'
+// Returns a new string with all replacements made; the original string is unchanged
+console.log(txt.replaceAll("i", "xx")); // Outputs: "hello world thxxs xxs john doe", replacing both "i"s (at indexes 13 and 18) with "xx"
+
+// '.repeat(count)' returns a new string with the original string repeated 'count' times
+console.log(txt.repeat(3)); // Outputs: "hello world this is john doehello world this is john doehello world this is john doe"
+// The string is repeated 3 times consecutively without any separator
+
+// '.trim()' removes whitespace (spaces, tabs, etc.) from both the start and end of the string
+console.log("        hello world           ".trim()); // Outputs: "hello world", removing leading and trailing spaces
