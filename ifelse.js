@@ -7,47 +7,47 @@
 
 // 'prompt()' displays a dialog box to take user input as a string
 // 'parseInt()' converts the string input to an integer
-var age = parseInt(prompt("Enter your age : "));
+// var age = parseInt(prompt("Enter your age : "));
 // Checks if 'age' is greater than 18
-if (age > 18) {
-  console.log("Eligible"); // Executes if age > 18, outputs: "Eligible"
-} else {
-  console.log("Not Eligible"); // Executes if age <= 18, outputs: "Not Eligible"
-}
+// if (age > 18) {
+  // console.log("Eligible"); // Executes if age > 18, outputs: "Eligible"
+// } else {
+  // console.log("Not Eligible"); // Executes if age <= 18, outputs: "Not Eligible"
+// }
 
 // 'if-else if-else' allows checking multiple conditions in sequence
 // The first true condition's block executes; if none are true, the 'else' block executes
 // Only one block executes, and subsequent conditions are skipped once a true condition is found
 
-var month = parseInt(prompt("Enter the month number (1-12) : "));
-// Checks 'month' against each condition in order
-if (month == 1) {
-  console.log("January"); // Outputs: "January" if month is 1
-} else if (month == 2) {
-  console.log("February"); // Outputs: "February" if month is 2
-} else if (month == 3) {
-  console.log("March"); // Outputs: "March" if month is 3
-} else if (month == 4) {
-  console.log("April"); // Outputs: "April" if month is 4
-} else if (month == 5) {
-  console.log("May"); // Outputs: "May" if month is 5
-} else if (month == 6) {
-  console.log("June"); // Outputs: "June" if month is 6
-} else if (month == 7) {
-  console.log("July"); // Outputs: "July" if month is 7
-} else if (month == 8) {
-  console.log("August"); // Outputs: "August" if month is 8
-} else if (month == 9) {
-  console.log("September"); // Outputs: "September" if month is 9
-} else if (month == 10) {
-  console.log("October"); // Outputs: "October" if month is 10
-} else if (month == 11) {
-  console.log("November"); // Outputs: "November" if month is 11
-} else if (month == 12) {
-  console.log("December"); // Outputs: "December" if month is 12
-} else {
-  console.log("Invalid Month"); // Outputs: "Invalid Month" if no condition is true
-}
+// var month = parseInt(prompt("Enter the month number (1-12) : "));
+// // Checks 'month' against each condition in order
+// if (month == 1) {
+//   console.log("January"); // Outputs: "January" if month is 1
+// } else if (month == 2) {
+//   console.log("February"); // Outputs: "February" if month is 2
+// } else if (month == 3) {
+//   console.log("March"); // Outputs: "March" if month is 3
+// } else if (month == 4) {
+//   console.log("April"); // Outputs: "April" if month is 4
+// } else if (month == 5) {
+//   console.log("May"); // Outputs: "May" if month is 5
+// } else if (month == 6) {
+//   console.log("June"); // Outputs: "June" if month is 6
+// } else if (month == 7) {
+//   console.log("July"); // Outputs: "July" if month is 7
+// } else if (month == 8) {
+//   console.log("August"); // Outputs: "August" if month is 8
+// } else if (month == 9) {
+//   console.log("September"); // Outputs: "September" if month is 9
+// } else if (month == 10) {
+//   console.log("October"); // Outputs: "October" if month is 10
+// } else if (month == 11) {
+//   console.log("November"); // Outputs: "November" if month is 11
+// } else if (month == 12) {
+//   console.log("December"); // Outputs: "December" if month is 12
+// } else {
+//   console.log("Invalid Month"); // Outputs: "Invalid Month" if no condition is true
+// }
 
 // Practice Tasks for if, else, and else if Statements
 // No loops or functions are used, focusing on conditional logic
@@ -104,3 +104,107 @@ if (month == 1) {
 // Prompt the user for the current hour (0-23).
 // If the hour is less than 12, log "Morning".
 // If the hour is
+
+
+
+
+// nested conditions
+// var salary = parseInt(prompt("Enter your salary"))
+// var creditScore = prompt("Do Your Have Good Credit Score (Yes | No) : ").toLowerCase()
+
+
+if (creditScore === "yes"){
+    if (salary >= 50000){
+      console.log("Eligible to loan upto 100000")
+    }else{
+      console.log("Eligible to loan upto 50000")
+    }
+}else{
+  console.log("No Eligible For Loan")
+}
+
+
+
+
+// Task 1: Car Insurance Eligibility
+// - Prompt user to enter their age
+// - Prompt user to enter number of years they've held a driver's license
+// - Check eligibility for car insurance:
+//   - Must be at least 18 years old
+//   - If 18 or older and license held for 2+ years, eligible for "Full Coverage"
+//   - If 18 or older but license held for less than 2 years, eligible for "Basic Coverage"
+//   - Otherwise, "Not Eligible"
+// - Output the result to console
+
+var age = parseInt(prompt("Enter your age : "))
+var years_license_hold = parseInt(prompt("Enter number of years they've held a driver's license:  "))
+
+if(age >= 18){
+  if (years_license_hold >= 2){
+    console.log("Full Coverage")
+  }else{
+    console.log("Basic Coverage")
+  }
+}else{
+  console.log( "Not Eligible")
+}
+
+
+
+
+// Task 2: Movie Ticket Pricing
+// - Prompt user to enter their age
+// - Prompt user if they are a student ("Yes" or "No")
+// - Calculate ticket price based on rules:
+//   - Age under 12: $5
+//   - Age 12 to 18: $8 if not a student, $6 if a student
+//   - Age above 18: $10 if not a student, $8 if a student
+// - Display the ticket price to console
+
+var age = parseInt(prompt("Enter your age : "))
+var isStudent = prompt("Are you a student :  " , "Yes or No").toLowerCase()
+
+if (age < 12){
+  console.log("$5")
+}else if (age >= 12 &&  age < 18){
+  if (isStudent == "yes"){
+    console.log("$6")
+  }else{
+    console.log("$8")
+  }
+}else{
+  if (isStudent == "yes"){
+    console.log("$8")
+  }else{
+    console.log("$10")
+  }
+}
+
+
+
+// Task 3: Shipping Cost Calculator
+// - Prompt user to enter weight of package in kg
+// - Prompt user for shipping destination ("Domestic" or "International")
+// - Determine shipping cost:
+//   - Domestic: $5 if weight <= 2kg, $10 if weight > 2kg
+//   - International: $15 if weight <= 2kg, $25 if weight > 2kg
+//   - If weight is negative, output "Invalid"
+// - Output the shipping cost to console
+
+// Task 4: Grade Evaluation
+// - Prompt user to enter exam score (0-100)
+// - Prompt user to enter attendance percentage (0-100)
+// - Determine grade based on rules:
+//   - Score >= 90 and attendance >= 80: "A"
+//   - Score >= 70 and attendance >= 80: "B"
+//   - Score >= 50 and attendance >= 80: "C"
+//   - Otherwise: "Fail"
+// - Display the grade to console
+
+// Task 5: Discount Eligibility
+// - Prompt user to enter total purchase amount
+// - Prompt user if they are a member ("Yes" or "No")
+// - Calculate discount eligibility:
+//   - Members: 20% discount if purchase >= $100, 10% if purchase < $100
+//   - Non-members: 5% discount if purchase >= $150, no discount otherwise
+// - Output the discount percentage or "No Discount" to console
