@@ -109,21 +109,24 @@
 
 
 // nested conditions
-// var salary = parseInt(prompt("Enter your salary"))
-// var creditScore = prompt("Do Your Have Good Credit Score (Yes | No) : ").toLowerCase()
+var salary = parseInt(prompt("Enter your salary"))
+var creditScore = prompt("Do Your Have Good Credit Score (Yes | No) : ").toLowerCase()
 
 
-if (creditScore === "yes"){
-    if (salary >= 50000){
-      console.log("Eligible to loan upto 100000")
-    }else{
-      console.log("Eligible to loan upto 50000")
+// Check if the variable 'creditScore' is exactly equal to the string "yes"
+if (creditScore === "yes") {
+    // If creditScore is "yes", check if the 'salary' is greater than or equal to 50000
+    if (salary >= 50000) {
+        // If salary is 50000 or more, print this message to the console
+        console.log("Eligible to loan upto 100000");
+    } else {
+        // If salary is less than 50000, print this message to the console
+        console.log("Eligible to loan upto 50000");
     }
-}else{
-  console.log("No Eligible For Loan")
+} else {
+    // If creditScore is not "yes", print this message to the console
+    console.log("No Eligible For Loan");
 }
-
-
 
 
 // Task 1: Car Insurance Eligibility
@@ -136,17 +139,24 @@ if (creditScore === "yes"){
 //   - Otherwise, "Not Eligible"
 // - Output the result to console
 
-var age = parseInt(prompt("Enter your age : "))
-var years_license_hold = parseInt(prompt("Enter number of years they've held a driver's license:  "))
+ // Prompt user for age and convert the string input to an integer
+var age = parseInt(prompt("Enter your age : "));
+// Prompt user for years of license held and convert the string input to an integer
+var years_license_hold = parseInt(prompt("Enter number of years they've held a driver's license:  "));
 
-if(age >= 18){
-  if (years_license_hold >= 2){
-    console.log("Full Coverage")
-  }else{
-    console.log("Basic Coverage")
-  }
-}else{
-  console.log( "Not Eligible")
+// Check if age is greater than or equal to 18
+if (age >= 18) {
+    // If age is 18 or older, check if years of license held is 2 or more
+    if (years_license_hold >= 2) {
+        // If license held for 2+ years, print "Full Coverage" to console
+        console.log("Full Coverage");
+    } else {
+        // If license held for less than 2 years, print "Basic Coverage" to console
+        console.log("Basic Coverage");
+    }
+} else {
+    // If age is less than 18, print "Not Eligible" to console
+    console.log("Not Eligible");
 }
 
 
@@ -161,24 +171,37 @@ if(age >= 18){
 //   - Age above 18: $10 if not a student, $8 if a student
 // - Display the ticket price to console
 
-var age = parseInt(prompt("Enter your age : "))
-var isStudent = prompt("Are you a student :  " , "Yes or No").toLowerCase()
 
-if (age < 12){
-  console.log("$5")
-}else if (age >= 12 &&  age < 18){
-  if (isStudent == "yes"){
-    console.log("$6")
-  }else{
-    console.log("$8")
-  }
-}else{
-  if (isStudent == "yes"){
-    console.log("$8")
-  }else{
-    console.log("$10")
-  }
+// Prompt user for age and convert the string input to an integer
+var age = parseInt(prompt("Enter your age : "));
+// Prompt user if they are a student, convert response to lowercase for consistent comparison
+var isStudent = prompt("Are you a student :  ", "Yes or No").toLowerCase();
+
+// Check if age is less than 12
+if (age < 12) {
+    // If age is under 12, ticket price is $5, print to console
+    console.log("$5");
+} else if (age >= 12 && age < 18) {
+    // If age is between 12 and 18 (inclusive of 12, exclusive of 18), check student status
+    if (isStudent == "yes") {
+        // If user is a student, ticket price is $6, print to console
+        console.log("$6");
+    } else {
+        // If user is not a student, ticket price is $8, print to console
+        console.log("$8");
+    }
+} else {
+    // If age is 18 or older, check student status
+    if (isStudent == "yes") {
+        // If user is a student, ticket price is $8, print to console
+        console.log("$8");
+    } else {
+        // If user is not a student, ticket price is $10, print to console
+        console.log("$10");
+    }
 }
+
+
 
 
 
@@ -190,6 +213,38 @@ if (age < 12){
 //   - International: $15 if weight <= 2kg, $25 if weight > 2kg
 //   - If weight is negative, output "Invalid"
 // - Output the shipping cost to console
+
+
+
+// Prompt user for package weight in kg and convert the string input to an integer
+var weight = parseInt(prompt("Enter weight in kg's : "));
+// Prompt user for shipping destination, convert to lowercase for consistent comparison
+var destination = prompt("Enter Shipping destination (Domestic | International) : ").toLowerCase();
+
+// Check if weight is less than or equal to 0
+if (weight <= 0) {
+    // If weight is negative or zero, print "Invalid" to console
+    console.log("Invalid");
+} else if (destination === "domestic") {
+    // If destination is "domestic", check weight
+    if (weight <= 2) {
+        // If weight is 2kg or less, shipping cost is $5, print to console
+        console.log("$5");
+    } else {
+        // If weight is more than 2kg, shipping cost is $10, print to console
+        console.log("$10");
+    }
+} else if (destination === "international") {
+    // If destination is "international", check weight
+    if (weight <= 2) {
+        // If weight is 2kg or less, shipping cost is $15, print to console
+        console.log("$15");
+    } else {
+        // If weight is more than 2kg, shipping cost is $25, print to console
+        console.log("$25");
+    }
+}
+
 
 // Task 4: Grade Evaluation
 // - Prompt user to enter exam score (0-100)
